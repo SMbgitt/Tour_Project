@@ -8,9 +8,9 @@
         WindowState="Maximized" Height="501" Width="1120">
     <Window.Resources>
         <DataTemplate x:Key="listTemplate">
-            <StackPanel Margin="5">
+            <StackPanel HorizontalAlignment="Center" Width="150" Height="100" Margin="5">
                 <Image Width="100" Height="75" Source="{Binding Path=UrlPhoto}"/>
-                <TextBlock FontSize="16" Text="{Binding Path=CountryName}" HorizontalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Center" FontSize="16" Text="{Binding Path=CountryName}"/>
             </StackPanel>
         </DataTemplate>
     </Window.Resources>
@@ -32,15 +32,17 @@
             </StackPanel>
         </StackPanel>
 
-        <ListBox Grid.Row="1" x:Name="phonesList" ItemTemplate="{StaticResource listTemplate}" 
-                 SelectionChanged="phonesList_SelectionChanged"
-                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                 >
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel />
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-        </ListBox>
+        <DockPanel Grid.Row="1">
+            <ListBox x:Name="phonesList" 
+                     ItemTemplate="{StaticResource listTemplate}" 
+                     SelectionChanged="phonesList_SelectionChanged"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel HorizontalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </DockPanel>
     </Grid>
 </Window>
