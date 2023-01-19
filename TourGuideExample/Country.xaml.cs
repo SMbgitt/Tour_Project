@@ -59,29 +59,25 @@ namespace TourGuideExample
             foreach (SightBase sight in sightBase)
             {
                 Sight += sight.Description;
-                Sight += " ";
-                Sight += "&#x0a;";
+                Sight += "\n";
             }
 
             foreach (CurrencyBase currency in currencyBase)
             {
                 Currency += currency.Description;
-                Currency += " ";
-                Currency += "&#x0a;";
+                Currency += "\n";
             }
 
             foreach (DangerBase danger in dangerBase)
             {
                 Danger += danger.Description;
-                Danger += " ";
-                Danger += "&#x0a;";
+                Danger += "\n";
             }
 
             foreach (FactBase fact in factBase)
             {
                 Fact += fact.Description;
-                Fact += " ";
-                Fact += "&#x0a;";
+                Fact += "\n";
             }
 
             nameCountry.Text = countryBase.Name;

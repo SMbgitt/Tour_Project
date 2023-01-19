@@ -9,11 +9,32 @@
 
   <ItemGroup>
     <None Remove="Photo\89156607.jpg" />
+    <None Remove="Photo\Brazil1.jpg" />
+    <None Remove="Photo\Brazil2.jpg" />
+    <None Remove="Photo\Brazilflag.png" />
+    <None Remove="Photo\Canada1.jfif" />
+    <None Remove="Photo\Canada2.jpg" />
+    <None Remove="Photo\Canadaflag.jpg" />
+    <None Remove="Photo\China1.jpg" />
+    <None Remove="Photo\China2.jfif" />
+    <None Remove="Photo\Chinaflag.png" />
+    <None Remove="Photo\France1.jpg" />
+    <None Remove="Photo\France2.jpg" />
+    <None Remove="Photo\Franceflag.jpg" />
     <None Remove="Photo\Japan1.jpg" />
     <None Remove="Photo\Japan2.jpg" />
     <None Remove="Photo\Japan3.jfif" />
     <None Remove="Photo\Kazakhstan.jpg" />
     <None Remove="Photo\pantalgar.jpg" />
+    <None Remove="Photo\Peru1.jpg" />
+    <None Remove="Photo\Peru2.jfif" />
+    <None Remove="Photo\Peruflag.png" />
+    <None Remove="Photo\Spain1.jpg" />
+    <None Remove="Photo\Spain2.jpeg" />
+    <None Remove="Photo\Spainflag.png" />
+    <None Remove="Photo\USA1.jfif" />
+    <None Remove="Photo\USA2.jpg" />
+    <None Remove="Photo\USAflag.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,11 +47,32 @@
 
   <ItemGroup>
     <Resource Include="Photo\89156607.jpg" />
+    <Resource Include="Photo\Brazil1.jpg" />
+    <Resource Include="Photo\Brazil2.jpg" />
+    <Resource Include="Photo\Brazilflag.png" />
+    <Resource Include="Photo\Canada1.jfif" />
+    <Resource Include="Photo\Canada2.jpg" />
+    <Resource Include="Photo\Canadaflag.jpg" />
+    <Resource Include="Photo\China1.jpg" />
+    <Resource Include="Photo\China2.jfif" />
+    <Resource Include="Photo\Chinaflag.png" />
+    <Resource Include="Photo\France1.jpg" />
+    <Resource Include="Photo\France2.jpg" />
+    <Resource Include="Photo\Franceflag.jpg" />
     <Resource Include="Photo\Japan1.jpg" />
     <Resource Include="Photo\Japan2.jpg" />
     <Resource Include="Photo\Japan3.jfif" />
     <Resource Include="Photo\Kazakhstan.jpg" />
     <Resource Include="Photo\pantalgar.jpg" />
+    <Resource Include="Photo\Peru1.jpg" />
+    <Resource Include="Photo\Peru2.jfif" />
+    <Resource Include="Photo\Peruflag.png" />
+    <Resource Include="Photo\Spain1.jpg" />
+    <Resource Include="Photo\Spain2.jpeg" />
+    <Resource Include="Photo\Spainflag.png" />
+    <Resource Include="Photo\USA1.jfif" />
+    <Resource Include="Photo\USA2.jpg" />
+    <Resource Include="Photo\USAflag.png" />
   </ItemGroup>
 
 </Project>

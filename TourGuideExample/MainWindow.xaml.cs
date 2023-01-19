@@ -25,25 +25,64 @@ public partial class MainWindow : Window
 
     private void btnSA_Click(object sender, RoutedEventArgs e)
     {
-        //CountriesBase = infoCountries.GetCountriesListById("1");
-        //OpenNewWindow(CountriesBase);
+        CountriesBase = infoCountries.GetCountriesListById(1);
+
+        foreach (CountryBase countryName in CountriesBase)
+        {
+            _objectList = new ObservableCollection<ProbaList>()
+                {
+                     new ProbaList
+                     {
+                         UrlPhoto = "\\Photo\\Japan2.jpg",
+                         CountryName = countryName.Name
+                     }
+                };
+        }
+
+        OpenNewWindow(_objectList);
     }
 
     private void btnNA_Click(object sender, RoutedEventArgs e)
     {
-        //CountriesBase = infoCountries.GetCountriesListById("2");
-        //OpenNewWindow(CountriesBase);
+        CountriesBase = infoCountries.GetCountriesListById(2);
+
+        foreach (CountryBase countryName in CountriesBase)
+        {
+            _objectList = new ObservableCollection<ProbaList>()
+                {
+                     new ProbaList
+                     {
+                         UrlPhoto = "\\Photo\\Japan2.jpg",
+                         CountryName = countryName.Name
+                     }
+                };
+        }
+
+        OpenNewWindow(_objectList);
     }
 
     private void btnEU_Click(object sender, RoutedEventArgs e)
     {
-        //CountriesBase = infoCountries.GetCountriesListById("3");
-        //OpenNewWindow(CountriesBase);
+        CountriesBase = infoCountries.GetCountriesListById(3);
+
+        foreach (CountryBase countryName in CountriesBase)
+        {
+            _objectList = new ObservableCollection<ProbaList>()
+                {
+                     new ProbaList
+                     {
+                         UrlPhoto = "\\Photo\\Japan2.jpg",
+                         CountryName = countryName.Name
+                     }
+                };
+        }
+
+        OpenNewWindow(_objectList);
     }
 
     private void btnSEA_Click(object sender, RoutedEventArgs e)
     {
-        CountriesBase = infoCountries.GetCountriesListById(1);
+        CountriesBase = infoCountries.GetCountriesListById(4);
 
         foreach (CountryBase countryName in CountriesBase)
         {
