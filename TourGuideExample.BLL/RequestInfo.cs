@@ -6,7 +6,7 @@ namespace TourGuideExample.BLL;
 
 public class RequestInfo
 {
-    string connectionString = @"Server=DESKTOP-Q6RQB80;Database=TourDB;Trusted_Connection=True;";
+    string connectionString = @"Server=223-4;Database=TouristBase;Trusted_Connection=True;";
     public List<CountryBase> GetCountries()
     {
         List<CountryBase> countries = new List<CountryBase>();
@@ -212,27 +212,7 @@ public class RequestInfo
         return DangerId;
     }
 
-   public List<PictureBase> GetPicture(int countryId)
-    {
-        List<PictureBase> Picture = new List<PictureBase>();
 
-        try
-        {
-            using (SqlConnection db = new SqlConnection(connectionString))
-            {
-                db.Open();
-
-                Picture = db.Query<DangerBase>("SELECT * FROM Picture where Id = @Id",
-                                new { Id = countryId }).ToList();
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.Write(ex.Message);
-        }
-
-        return Picture;
-    }
 
 
 }

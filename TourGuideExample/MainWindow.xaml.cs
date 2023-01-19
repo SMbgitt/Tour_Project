@@ -27,7 +27,6 @@ public partial class MainWindow : Window
     private void btnSA_Click(object sender, RoutedEventArgs e)
     {
         CountriesBase = infoCountries.GetCountriesListById(1);
-        pictureBase = infoCountries.GetPicture(1);
 
         foreach (CountryBase countryName in CountriesBase)
         {

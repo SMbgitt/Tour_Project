@@ -49,7 +49,6 @@ namespace TourGuideExample
             countryBase = countryInfo.GetCountryById(1);
             sightBase = countryInfo.GetSightsByCountryId(1);
             factBase = countryInfo.GetFactsByCountryId(1);
-            pictureBase = countryInfo.GetPicture(1);
 
             currencyBaseId = countryInfo.GetCountryCurrencyId(1);
             dangerousBaseId = countryInfo.GetCountryDangerousId(1);
