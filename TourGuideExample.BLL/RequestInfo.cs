@@ -212,6 +212,27 @@ public class RequestInfo
         return DangerId;
     }
 
-   
+   public List<PictureBase> GetPicture(int countryId)
+    {
+        List<PictureBase> Picture = new List<PictureBase>();
+
+        try
+        {
+            using (SqlConnection db = new SqlConnection(connectionString))
+            {
+                db.Open();
+
+                Picture = db.Query<DangerBase>("SELECT * FROM Picture where Id = @Id",
+                                new { Id = countryId }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.Write(ex.Message);
+        }
+
+        return Picture;
+    }
+
 
 }

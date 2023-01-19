@@ -25,6 +25,7 @@ namespace TourGuideExample
         CountryBase countryBase = new CountryBase();
         List<SightBase> sightBase = new List<SightBase>();
         List<FactBase> factBase = new List<FactBase>();
+        List<PictureBase> pictureBase = new List<PictureBase>();
 
         List<CountryCurrencyBase> currencyBaseId = new List<CountryCurrencyBase>();
         List<CountryDangerous> dangerousBaseId = new List<CountryDangerous>();
@@ -48,6 +49,7 @@ namespace TourGuideExample
             countryBase = countryInfo.GetCountryById(1);
             sightBase = countryInfo.GetSightsByCountryId(1);
             factBase = countryInfo.GetFactsByCountryId(1);
+            pictureBase = countryInfo.GetPicture(1);
 
             currencyBaseId = countryInfo.GetCountryCurrencyId(1);
             dangerousBaseId = countryInfo.GetCountryDangerousId(1);

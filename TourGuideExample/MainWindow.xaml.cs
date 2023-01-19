@@ -15,6 +15,7 @@ public partial class MainWindow : Window
 
     public List<CountryBase> CountriesBase { get; set; }
     RequestInfo infoCountries = new RequestInfo();
+    List<PictureBase> pictureBase = new List<PictureBase>();
     public ObservableCollection<ProbaList> _objectList { get; set; }
 
 
@@ -26,6 +27,7 @@ public partial class MainWindow : Window
     private void btnSA_Click(object sender, RoutedEventArgs e)
     {
         CountriesBase = infoCountries.GetCountriesListById(1);
+        pictureBase = infoCountries.GetPicture(1);
 
         foreach (CountryBase countryName in CountriesBase)
         {
@@ -34,7 +36,8 @@ public partial class MainWindow : Window
                      new ProbaList
                      {
                          UrlPhoto = "\\Photo\\Japan2.jpg",
-                         CountryName = countryName.Name
+                         CountryName = countryName.Name,
+                         ID = countryName.Id
                      }
                 };
         }
@@ -53,7 +56,8 @@ public partial class MainWindow : Window
                      new ProbaList
                      {
                          UrlPhoto = "\\Photo\\Japan2.jpg",
-                         CountryName = countryName.Name
+                         CountryName = countryName.Name,
+                         ID = countryName.Id
                      }
                 };
         }
@@ -72,7 +76,8 @@ public partial class MainWindow : Window
                      new ProbaList
                      {
                          UrlPhoto = "\\Photo\\Japan2.jpg",
-                         CountryName = countryName.Name
+                         CountryName = countryName.Name,
+                         ID = countryName.Id
                      }
                 };
         }
@@ -91,7 +96,8 @@ public partial class MainWindow : Window
                      new ProbaList
                      {
                          UrlPhoto = "\\Photo\\Japan2.jpg",
-                         CountryName = countryName.Name
+                         CountryName = countryName.Name,
+                         ID = countryName.Id
                      }
                 };
         }

@@ -5,9 +5,19 @@ namespace TourGuideExample;
 
 public class ProbaList : INotifyPropertyChanged
 {
+    int _iD = 0;
     string _urlPhoto = "";
     string _countryName = "";
 
+    public int ID
+    {
+        get { return _iD; }
+        set
+        {
+            _iD = value;
+            OnPropertyChanged(nameof(ID));
+        }
+    }
     public string UrlPhoto
     {
         get { return _urlPhoto; }
@@ -17,6 +27,8 @@ public class ProbaList : INotifyPropertyChanged
             OnPropertyChanged(nameof(UrlPhoto));
         }
     }
+
+
     public string CountryName
     {
         get { return _countryName; }
@@ -26,6 +38,7 @@ public class ProbaList : INotifyPropertyChanged
             OnPropertyChanged(nameof(CountryName));
         }
     }
+
 
     public event PropertyChangedEventHandler? PropertyChanged;
     public void OnPropertyChanged([CallerMemberName] string prop = "")

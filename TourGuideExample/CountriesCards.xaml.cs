@@ -24,6 +24,7 @@ namespace TourGuideExample
     {
         Country country = new Country();
         public ObservableCollection<ProbaList> _objectList { get; set; }
+        public string CountryChange { get; set; }
 
         public CountriesCards()
         {
@@ -37,8 +38,9 @@ namespace TourGuideExample
 
         private void phonesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
-            OpenNewWindow("1");
+            string a;
+            a = phonesList.SelectedItem.ToString();
+            OpenNewWindow(a);
         }
 
         private void OpenNewWindow(String countryChange)
