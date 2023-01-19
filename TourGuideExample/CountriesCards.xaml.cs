@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TourGuideExample.BLL;
 
 namespace TourGuideExample
 {
@@ -22,45 +23,36 @@ namespace TourGuideExample
     public partial class CountriesCards : Window
     {
         Country country = new Country();
-        public string ContinentsChange { get; set; }
-
-        private ObservableCollection<ProbaList> _objectList;
-        public ObservableCollection<ProbaList> ListBoxDataSource { get; set; }
-
+        public ObservableCollection<ProbaList> _objectList { get; set; }
 
         public CountriesCards()
         {
             InitializeComponent();
+        }
 
-            _objectList = new ObservableCollection<ProbaList>()
-            {
-                 new ProbaList
-                 {
-                     UrlPhoto = "\\Photo\\Kazakhstan.jpg",
-                     CountryName = "Kazakhstan"
-                 },
-                 new ProbaList
-                 {
-                     UrlPhoto = "\\Photo\\Kazakhstan.jpg",
-                     CountryName = "Uzbekistan"
-                 }
-
-            };
-
+        public void ViewCountries()
+        {
             phonesList.ItemsSource = _objectList;
-
         }
 
         private void phonesList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            OpenNewWindow("Kazakhstan");
+           
+            OpenNewWindow("1");
         }
 
         private void OpenNewWindow(String countryChange)
         {
             country.CountryChange = countryChange;
             this.Close();
+            country.ViewCountry();
             country.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            phonesList.ItemsSource = _objectList;
+
         }
     }
 }

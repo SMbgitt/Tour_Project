@@ -30,7 +30,7 @@
         </Grid.RowDefinitions>
         <ScrollViewer Grid.Row="0" Grid.RowSpan="3">
             <StackPanel>
-                <!--Блок Название страны и картинка-->
+                <!--Блок Название страны и картинка nameCountry-->
                 <DockPanel Height="650" >
                     <DockPanel.Background>
                         <ImageBrush ImageSource="/Photo/pantalgar.jpg"/>
@@ -38,7 +38,7 @@
                     <TextBlock x:Name="nameCountry" Text="Название страны" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60" Foreground="White"></TextBlock>
                 </DockPanel>
 
-                <!--Блок описание-->
+                <!--Блок описание descriptionInfo-->
                 <StackPanel>
                     <DockPanel Height="120">
                         <TextBlock Text="Описание" Style="{StaticResource HeaderText}"/>
@@ -48,7 +48,7 @@
                                Style="{StaticResource Info}"/>
                 </StackPanel>
 
-                <!--Блок Местная кухня-->
+                <!--Блок Местная кухня kitchenInfo-->
                 <StackPanel>
                     <DockPanel Height="120">
                         <TextBlock Text="Местная кухня" Style="{StaticResource HeaderText}"/>
@@ -58,7 +58,7 @@
                                Style="{StaticResource Info}"/>
                 </StackPanel>
 
-                <!--Блок Цена на питание и проживание-->
+                <!--Блок Цена на питание и проживание livingRoomInfo-->
                 <StackPanel>
                     <DockPanel Height="120">
                         <TextBlock Text="Цена на питание и проживание" Style="{StaticResource HeaderText}"/>
@@ -68,7 +68,7 @@
                                Style="{StaticResource Info}"/>
                 </StackPanel>
 
-                <!--Блок опасности-->
+                <!--Блок опасности dangerInfo-->
                 <StackPanel>
                     <DockPanel Height="120">
                         <TextBlock Text="Опасности" Style="{StaticResource HeaderText}"/>
@@ -79,7 +79,7 @@
                                Style="{StaticResource Info}"/>
                 </StackPanel>
 
-                <!--Блок достопримечательности-->
+                <!--Блок достопримечательности attractionInfo-->
                 <StackPanel>
                     <DockPanel Height="120">
                         <TextBlock Text="Достопримечательности" Style="{StaticResource HeaderText}"/>
@@ -90,7 +90,7 @@
                                Style="{StaticResource Info}"/>
                 </StackPanel>
 
-                <!--Блок факты-->
+                <!--Блок факты factsInfo-->
                 <StackPanel>
                     <DockPanel Height="135">
                         <TextBlock Text="Факты" Style="{StaticResource HeaderText}" />
@@ -101,7 +101,7 @@
                                Style="{StaticResource Info}"/>
                 </StackPanel>
 
-                <!--Блок Валюта-->
+                <!--Блок Валюта moneyInfo-->
                 <StackPanel>
                     <DockPanel Height="135">
                         <TextBlock Text="Валюта" Style="{StaticResource HeaderText}" />
@@ -111,7 +111,7 @@
                                Style="{StaticResource Info}"/>
                 </StackPanel>
 
-                <!--Блок Часовой пояс-->
+                <!--Блок Часовой пояс timeInfo-->
                 <StackPanel>
                     <DockPanel Height="135">
                         <TextBlock Text="Часовой пояс" Style="{StaticResource HeaderText}" />
@@ -121,7 +121,7 @@
                                Style="{StaticResource Info}"/>
                 </StackPanel>
 
-                <!--Блок Погодные условия-->
+                <!--Блок Погодные условия weatherInfo-->
                 <StackPanel>
                     <DockPanel Height="135">
                         <TextBlock Text="Погодные условия" Style="{StaticResource HeaderText}" />
@@ -130,7 +130,7 @@
                                Text=""                               
                                Style="{StaticResource Info}"/>
                 </StackPanel>
-                
+
             </StackPanel>
         </ScrollViewer>
     </Grid>

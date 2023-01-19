@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TourGuideExample.BLL;
 
 namespace TourGuideExample
 {
@@ -20,15 +21,78 @@ namespace TourGuideExample
     public partial class Country : Window
     {
         public string CountryChange { get; set; }
+        RequestInfo countryInfo = new RequestInfo();
+        CountryBase countryBase = new CountryBase();
+        List<SightBase> sightBase = new List<SightBase>();
+        List<FactBase> factBase = new List<FactBase>();
+
+        List<CountryCurrencyBase> currencyBaseId = new List<CountryCurrencyBase>();
+        List<CountryDangerous> dangerousBaseId = new List<CountryDangerous>();
+
+        List<CurrencyBase> currencyBase = new List<CurrencyBase>();
+        List<DangerBase> dangerBase = new List<DangerBase>();
+
+        private string Sight { get; set; }
+        private string Fact { get; set; }
+        private string Currency { get; set; }
+        private string Danger { get; set; }
 
         public Country()
         {
             InitializeComponent();
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void ViewCountry()
         {
-            MessageBox.Show(CountryChange);
+            countryBase = countryInfo.GetCountryById(1);
+            sightBase = countryInfo.GetSightsByCountryId(1);
+            factBase = countryInfo.GetFactsByCountryId(1);
+
+            currencyBaseId = countryInfo.GetCountryCurrencyId(1);
+            dangerousBaseId = countryInfo.GetCountryDangerousId(1);
+
+            currencyBase = countryInfo.GetCurrencyByCountryId(currencyBaseId);
+            dangerBase = countryInfo.GetDangerousByCountryId(dangerousBaseId);
+
+
+            foreach (SightBase sight in sightBase)
+            {
+                Sight += sight.Description;
+                Sight += " ";
+                Sight += "&#x0a;";
+            }
+
+            foreach (CurrencyBase currency in currencyBase)
+            {
+                Currency += currency.Description;
+                Currency += " ";
+                Currency += "&#x0a;";
+            }
+
+            foreach (DangerBase danger in dangerBase)
+            {
+                Danger += danger.Description;
+                Danger += " ";
+                Danger += "&#x0a;";
+            }
+
+            foreach (FactBase fact in factBase)
+            {
+                Fact += fact.Description;
+                Fact += " ";
+                Fact += "&#x0a;";
+            }
+
+            nameCountry.Text = countryBase.Name;
+            descriptionInfo.Text = countryBase.Description;
+            kitchenInfo.Text = countryBase.Kitchen;
+            timeInfo.Text = countryBase.TimeZone;
+            weatherInfo.Text = countryBase.Weather;
+            attractionInfo.Text = Sight;
+            moneyInfo.Text = Currency;
+            dangerInfo.Text = Danger;
+            factsInfo.Text = Fact;
         }
 
         private void ListBoxMouseDown(object sender, MouseButtonEventArgs e)

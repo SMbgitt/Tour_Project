@@ -9,12 +9,26 @@
 
   <ItemGroup>
     <None Remove="Photo\89156607.jpg" />
+    <None Remove="Photo\Japan1.jpg" />
+    <None Remove="Photo\Japan2.jpg" />
+    <None Remove="Photo\Japan3.jfif" />
     <None Remove="Photo\Kazakhstan.jpg" />
     <None Remove="Photo\pantalgar.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TourGuideExample.BLL\TourGuideExample.BLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Photo\89156607.jpg" />
+    <Resource Include="Photo\Japan1.jpg" />
+    <Resource Include="Photo\Japan2.jpg" />
+    <Resource Include="Photo\Japan3.jfif" />
     <Resource Include="Photo\Kazakhstan.jpg" />
     <Resource Include="Photo\pantalgar.jpg" />
   </ItemGroup>

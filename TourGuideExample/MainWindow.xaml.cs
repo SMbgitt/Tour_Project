@@ -1,56 +1,70 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using TourGuideExample.BLL;
 
-namespace TourGuideExample
+namespace TourGuideExample;
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    CountriesCards Continent = new CountriesCards();
+
+    public List<CountryBase> CountriesBase { get; set; }
+    RequestInfo infoCountries = new RequestInfo();
+    public ObservableCollection<ProbaList> _objectList { get; set; }
+
+
+    public MainWindow()
     {
-        CountriesCards Continent = new CountriesCards();
-        public MainWindow()
+        InitializeComponent();
+    }
+
+    private void btnSA_Click(object sender, RoutedEventArgs e)
+    {
+        //CountriesBase = infoCountries.GetCountriesListById("1");
+        //OpenNewWindow(CountriesBase);
+    }
+
+    private void btnNA_Click(object sender, RoutedEventArgs e)
+    {
+        //CountriesBase = infoCountries.GetCountriesListById("2");
+        //OpenNewWindow(CountriesBase);
+    }
+
+    private void btnEU_Click(object sender, RoutedEventArgs e)
+    {
+        //CountriesBase = infoCountries.GetCountriesListById("3");
+        //OpenNewWindow(CountriesBase);
+    }
+
+    private void btnSEA_Click(object sender, RoutedEventArgs e)
+    {
+        CountriesBase = infoCountries.GetCountriesListById(1);
+
+        foreach (CountryBase countryName in CountriesBase)
         {
-            InitializeComponent();
+            _objectList = new ObservableCollection<ProbaList>()
+                {
+                     new ProbaList
+                     {
+                         UrlPhoto = "\\Photo\\Japan2.jpg",
+                         CountryName = countryName.Name
+                     }
+                };
         }
 
-        private void btnSA_Click(object sender, RoutedEventArgs e)
-        {
-            OpenNewWindow("SA");
-        }
+        OpenNewWindow(_objectList);
+    }
 
-        private void btnNA_Click(object sender, RoutedEventArgs e)
-        {
-            OpenNewWindow("NA");
-        }
-
-        private void btnEU_Click(object sender, RoutedEventArgs e)
-        {
-            OpenNewWindow("EU");
-        }
-
-        private void btnSEA_Click(object sender, RoutedEventArgs e)
-        {
-            OpenNewWindow("SEA");
-        }
-
-        private void OpenNewWindow(String continentsChange)
-        {
-            Continent.ContinentsChange = continentsChange;
-            this.Close();
-            Continent.Show();
-        }
+    private void OpenNewWindow(ObservableCollection<ProbaList> objectList)
+    {
+        Continent._objectList = objectList;
+        this.Close();
+        Continent.ViewCountries();
+        Continent.Show();
     }
 }

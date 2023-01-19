@@ -8,7 +8,7 @@
         WindowState="Maximized" Height="501" Width="1120">
     <Window.Resources>
         <DataTemplate x:Key="listTemplate">
-            <StackPanel HorizontalAlignment="Center" Width="150" Height="100" Margin="5">
+            <StackPanel Background="Bisque" HorizontalAlignment="Center" Margin="5">
                 <Image Width="100" Height="75" Source="{Binding Path=UrlPhoto}"/>
                 <TextBlock HorizontalAlignment="Center" FontSize="16" Text="{Binding Path=CountryName}"/>
             </StackPanel>
@@ -25,7 +25,7 @@
                 <TextBox Width="130" Height="20"></TextBox>
             </DockPanel>
             <DockPanel Width="90">
-                <Button Width="80" Height="20" Content="Найти страну"></Button>
+                <Button Width="80" Height="20" Click="Button_Click" Content="Найти страну"></Button>
             </DockPanel>
             <StackPanel>
                 <TextBlock x:Name="qwert" />
